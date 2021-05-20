@@ -1,0 +1,121 @@
+body {
+  background-color: rgb(226, 227, 228);
+}
+.teamIconContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fff;
+  width: 100%;
+}
+.iconSize {
+  height: 50px;
+}
+
+.paperScorersrs {
+  width: 100%;
+  box-shadow: 5px 5px 5px 5px rgb(214, 214, 215);
+  padding-bottom: 2%;
+}
+
+.ranking {
+  width: 100%;
+  margin-right: 1%;
+  box-shadow: 5px 5px 5px 5px rgb(214, 214, 215);
+}
+.Font {
+  margin-left: 10%;
+  padding-top: 20px;
+  margin-bottom: 3%;
+}
+.ranking_scorers {
+  display: flex;
+  margin-top: 2%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.RoundInfo {
+  margin-top: 2%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.rightFlex {
+  flex-direction: column;
+  width: 38%;
+}
+.leftFlex {
+  width: 60%;
+}
+
+.paperLeftGames {
+  width: 100%;
+  margin-top: 5%;
+  box-shadow: 5px 5px 5px 5px rgb(214, 214, 215);
+  padding-bottom: 2%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .teamIconContainer {
+    display: none;
+  }
+  .leftFlex {
+    width: 100%;
+  }
+  .ranking_scorers {
+    width: 260%;
+  }
+  .paperScorersrs {
+    width: 100%;
+  }
+  .paperLeftGames {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .teamIconContainer {
+    display: none;
+  }
+  .ranking_scorers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .leftFlex {
+    width: 100%;
+  }
+  .rightFlex {
+    width: 100%;
+  }
+  .paperScorersrs {
+    width: 100%;
+  }
+  .paperLeftGames {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .teamIconContainer {
+    width: 100%;
+  }
+  .iconSize {
+    height: 35px;
+    width: 35px;
+  }
+  .ranking_paperScorersrs {
+    flex-direction: column;
+  }
+  .leftFlex {
+    width: 100%;
+  }
+  .rightFlex {
+    width: 100%;
+  }
+  .paperScorers {
+    width: 100%;
+  }
+  .paperLeftGames {
+    width: 100%;
+  }
+}

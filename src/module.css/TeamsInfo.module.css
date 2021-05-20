@@ -1,0 +1,93 @@
+.colorDisplay {
+  display: flex;
+  height: 50px;
+}
+.item1 {
+  background-color: black;
+  width: 50%;
+}
+
+.item2 {
+  background-color: blue;
+  width: 50%;
+}
+
+.activeInfo {
+  margin-top: 2%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  height: 24px;
+}
+.teamNameInfo {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.squadPaper {
+  width: 50%;
+  box-shadow: 5px 5px 5px 5px rgb(214, 214, 215);
+  font-size: 0.9rem;
+  padding-bottom: 2%;
+}
+.coachName {
+  margin-top: 2%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 2%;
+}
+.flexContainer {
+  display: flex;
+  margin-top: 2%;
+  justify-content: space-between;
+}
+
+.leftGames {
+  padding-top: 2%;
+  box-shadow: 5px 5px 5px 5px rgb(214, 214, 215);
+  font-size: 0.9rem;
+  width: 45%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+  .squadPaper {
+    width: 100%;
+  }
+  .leftGames {
+    margin-top: 2%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+  .squadPaper {
+    width: 100%;
+  }
+  .leftGames {
+    margin-top: 2%;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .squadPaper {
+    width: 100%;
+  }
+  .leftGames {
+    margin-top: 2%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+.Container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-right: 1px;
+}
+
+.items {
+  width: 100%;
+  height: 100%;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  border-right: 1px solid;
+  align-items: center;
+}
+
+.leftGamesTable {
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  font-size: 0.8rem;
+}

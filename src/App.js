@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import { CircularProgress } from "@material-ui/core";
+import UtilsNationNavbar from "./utils/UtilsNationNavbar";
+
+const TeamInfoPage = lazy(() => import("./pages/TeamsInfo"));
+const HomePage = lazy(() => import("./pages/Home"));
+const LeaguePage = lazy(() => import("./pages/Leagues"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<CircularProgress />}>
+      <Router>
+        <UtilsNationNavbar />
+        <Switch>
+          <Route path="/teams/:id" children={<TeamInfoPage />}>
+            <TeamInfoPage />
+          </Route>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/Leagues/:League" children={<LeaguePage />}>
+            <LeaguePage />
+          </Route>
+          <Redirect path="**" to="/" />
+        </Switch>
+      </Router>
+    </Suspense>
   );
 }
 
