@@ -1,16 +1,6 @@
 body {
   background-color: rgb(226, 227, 228);
 }
-.teamIconContainer {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  background-color: #fff;
-  width: 100%;
-}
-.iconSize {
-  height: 50px;
-}
 
 .paperScorersrs {
   width: 100%;
@@ -57,9 +47,6 @@ body {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .teamIconContainer {
-    display: none;
-  }
   .leftFlex {
     width: 100%;
   }
@@ -74,9 +61,6 @@ body {
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  .teamIconContainer {
-    display: none;
-  }
   .ranking_scorers {
     display: flex;
     flex-direction: column;
@@ -96,13 +80,6 @@ body {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .teamIconContainer {
-    width: 100%;
-  }
-  .iconSize {
-    height: 35px;
-    width: 35px;
-  }
   .ranking_paperScorersrs {
     flex-direction: column;
   }

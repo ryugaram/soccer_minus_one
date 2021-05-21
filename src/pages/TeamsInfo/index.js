@@ -10,6 +10,7 @@ import Paper from "@material-ui/core/Paper";
 import PlayerInfo from "../../Components/PlayerInfo";
 import PlayerTabs from "../../Components/PlayerTabs";
 import EachTeamsLeftGames from "../../Components/EachTeamsLeftGames";
+import TeamsEmblem from "../../Components/TeamsEmblem";
 
 export default function TeamInfo() {
   const { id } = useParams();
@@ -50,6 +51,7 @@ export default function TeamInfo() {
   // console.log(teamInfo);
   console.log(matches);
   console.log(teamInfo);
+
   const teamSquad = teamInfo.squad;
   const teamActive = teamInfo.activeCompetitions;
 
@@ -92,6 +94,9 @@ export default function TeamInfo() {
   return (
     <Container>
       <Paper>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <img src={teamInfo.crestUrl} style={{ width: "100px" }} />
+        </div>
         <div className={style.teamNameInfo} style={{ color: "white" }}>
           {teamInfo.name}&nbsp;&nbsp; ({teamInfo.venue})
         </div>

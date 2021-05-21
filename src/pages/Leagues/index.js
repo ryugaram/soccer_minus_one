@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
 import "../../module.css/Leagues.module.css";
+import TeamsEmblem from "../../Components/TeamsEmblem";
 
 export default function Matches() {
   const { League } = useParams();
@@ -54,22 +55,13 @@ export default function Matches() {
 
   if (!scorers || !rankings || loading || !leftGames)
     return <UtilsCircularProgress />;
-  const teamsIcon = rankings.standings[0].table;
-  const teamsIconMap = teamsIcon.map((team, index) => (
-    <div key={index}>
-      <Link to={`/teams/${team.team.id}`}>
-        <img src={team.team.crestUrl} className={style.iconSize} />
-      </Link>
-    </div>
-  ));
+
   console.log(rankings);
   console.log(scorers);
   console.log(leftGames);
   return (
     <Container>
-      <Paper>
-        <div className={style.teamIconContainer}>{teamsIconMap}</div>
-      </Paper>
+      <TeamsEmblem rankings={rankings} />
 
       <Paper>
         <div className={style.RoundInfo}>

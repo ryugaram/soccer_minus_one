@@ -19,7 +19,7 @@ const NowdayMatches = ({ nowdayMatch }) => {
         <tr key={index}>
           <th></th>
           <td>예정된 매치가 없습니다</td>
-          <td></td>
+          <td> </td>
         </tr>
       );
     }
@@ -32,6 +32,7 @@ const NowdayMatches = ({ nowdayMatch }) => {
           {match.score.fullTime.awayTeam} &nbsp;
           <Link to={`/teams/${match.awayTeam.id}`}>{match.awayTeam.name}</Link>
         </td>
+        <td></td>
       </tr>
     );
   });
