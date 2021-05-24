@@ -3,8 +3,6 @@ import { Table } from "reactstrap";
 import { Link } from "react-router-dom";
 
 const TwoDaysAgo = ({ twoDaysAgoDayMatch }) => {
-  console.log(twoDaysAgoDayMatch);
-
   const twoDaysAgoFilter = twoDaysAgoDayMatch.filter(
     (match) =>
       match.competition.name === "Premier League" ||
@@ -13,24 +11,6 @@ const TwoDaysAgo = ({ twoDaysAgoDayMatch }) => {
       match.competition.name === "Primera Division" ||
       match.competition.name === "Ligue 1"
   );
-  console.log(twoDaysAgoFilter);
-
-  const twoDaysAgoMap = twoDaysAgoFilter.map((match, index) => {
-    return (
-      <tr key={index}>
-        <th scope="row" style={{ color: "blue" }}>
-          {match.utcDate.substring(0, 10)}
-        </th>
-        <td>
-          <Link to={`/teams/${match.homeTeam.id}`}>{match.homeTeam.name}</Link>
-          &nbsp;&nbsp;{match.score.fullTime.homeTeam} &nbsp;vs &nbsp;
-          {match.score.fullTime.awayTeam} &nbsp;
-          <Link to={`/teams/${match.awayTeam.id}`}>{match.awayTeam.name}</Link>
-        </td>
-        <td>{match.score.winner} </td>
-      </tr>
-    );
-  });
 
   return (
     <Table
@@ -49,7 +29,34 @@ const TwoDaysAgo = ({ twoDaysAgoDayMatch }) => {
           <th>승리팀</th>
         </tr>
       </thead>
-      <tbody>{twoDaysAgoMap}</tbody>
+      <tbody>
+        {twoDaysAgoFilter?.length ? (
+          twoDaysAgoFilter.map((match, index) => (
+            <tr key={index}>
+              <th scope="row" style={{ color: "blue" }}>
+                {match.utcDate.substring(0, 10)}
+              </th>
+              <td>
+                <Link to={`/teams/${match.homeTeam.id}`}>
+                  {match.homeTeam.name}
+                </Link>
+                &nbsp;&nbsp;{match.score.fullTime.homeTeam} &nbsp;vs &nbsp;
+                {match.score.fullTime.awayTeam} &nbsp;
+                <Link to={`/teams/${match.awayTeam.id}`}>
+                  {match.awayTeam.name}
+                </Link>
+              </td>
+              <td>{match.score.winner} </td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <th></th>
+            <td>예정된 매치가 없습니다</td>
+            <td> </td>
+          </tr>
+        )}
+      </tbody>
     </Table>
   );
 };

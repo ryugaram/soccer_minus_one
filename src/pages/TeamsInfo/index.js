@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import UtilsCircularProgress from "../../utils/UtilsCircularProgress";
 
-import NationNavbar from "../../utils/UtilsNationNavbar";
+import NationNavbar from "../../Components/NationNavbar";
 import style from "../../module.css/TeamsInfo.module.css";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
@@ -48,10 +48,6 @@ export default function TeamInfo() {
 
   if (loading || !teamInfo || !matches) return <UtilsCircularProgress />;
 
-  // console.log(teamInfo);
-  console.log(matches);
-  console.log(teamInfo);
-
   const teamSquad = teamInfo.squad;
   const teamActive = teamInfo.activeCompetitions;
 
@@ -71,9 +67,6 @@ export default function TeamInfo() {
 
   //감독이름
   const coachName = teamSquad.filter((player) => player.role === "COACH");
-  console.log(coachName);
-
-  console.log(teamInfo.clubColors);
 
   const teamColor = teamInfo.clubColors.split("/");
   teamColor[0] = teamColor[0].replace(" ", "");

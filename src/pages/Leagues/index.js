@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UtilsCircularProgress from "../../utils/UtilsCircularProgress";
 import RankingTable from "../../Components/RankingTable";
-import NationNavbar from "../../utils/UtilsNationNavbar";
+import NationNavbar from "../../Components/NationNavbar";
 import ScorerTable from "../../Components/ScorerTable";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -56,17 +56,20 @@ export default function Matches() {
   if (!scorers || !rankings || loading || !leftGames)
     return <UtilsCircularProgress />;
 
-  console.log(rankings);
-  console.log(scorers);
-  console.log(leftGames);
   return (
     <Container>
       <TeamsEmblem rankings={rankings} />
 
       <Paper>
         <div className={style.RoundInfo}>
-          {leftGames.matches[0].matchday}R 진행 ({rankings.season.startDate}~
-          {rankings.season.endDate})
+          {!leftGames.matches.count === 0 ? (
+            <>
+              {leftGames.matches[0].matchday}R 진행 ({rankings.season.startDate}
+              ~{rankings.season.endDate})
+            </>
+          ) : (
+            <> 시즌이 종료되었습니다!</>
+          )}
         </div>
       </Paper>
 

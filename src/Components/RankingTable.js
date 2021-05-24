@@ -5,7 +5,6 @@ import style from "../module.css/RankingTable.module.css";
 import { Link } from "react-router-dom";
 
 const RankingTable = ({ rankings }) => {
-  // console.log(rankings);
   const rankingsTable = rankings.standings[0].table;
 
   const scorerMap = rankingsTable.map((rankings, index) => (

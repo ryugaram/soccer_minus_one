@@ -3,22 +3,10 @@ import React from "react";
 import { Table } from "reactstrap";
 
 const EachTeamsLeftGames = ({ matches }) => {
-  console.log(matches);
   const matchesMap = matches.matches;
   const Utctime = (time) => {
     return time.substring(2, 10).replaceAll("-", "/");
   };
-
-  const leftmatches = matchesMap.map((match, index) => (
-    <tr key={index}>
-      <th scope="row">{Utctime(match.utcDate)}</th>
-      <td>
-        {match.homeTeam.name} vs {match.awayTeam.name}
-      </td>
-      <td>{match.matchday}</td>
-    </tr>
-  ));
-
   return (
     <Table
       striped
@@ -31,7 +19,27 @@ const EachTeamsLeftGames = ({ matches }) => {
           <th>Round</th>
         </tr>
       </thead>
-      <tbody>{leftmatches}</tbody>
+      <tbody>
+        {!matchesMap.length === 0 ? (
+          <>
+            {matchesMap.map((match, index) => (
+              <tr key={index}>
+                <th scope="row">{Utctime(match.utcDate)}</th>
+                <td>
+                  {match.homeTeam.name} vs {match.awayTeam.name}
+                </td>
+                <td>{match.matchday}</td>
+              </tr>
+            ))}
+          </>
+        ) : (
+          <tr>
+            <th scope="row"></th>
+            <td>시즌 종료</td>
+            <td></td>
+          </tr>
+        )}
+      </tbody>
     </Table>
   );
 };

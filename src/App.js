@@ -7,7 +7,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { CircularProgress } from "@material-ui/core";
-import UtilsNationNavbar from "./utils/UtilsNationNavbar";
+import NationNavbar from "./Components/NationNavbar";
 
 const TeamInfoPage = lazy(() => import("./pages/TeamsInfo"));
 const HomePage = lazy(() => import("./pages/Home"));
@@ -17,7 +17,7 @@ function App() {
   return (
     <Suspense fallback={<CircularProgress />}>
       <Router>
-        <UtilsNationNavbar />
+        <NationNavbar />
         <Switch>
           <Route path="/teams/:id" children={<TeamInfoPage />}>
             <TeamInfoPage />

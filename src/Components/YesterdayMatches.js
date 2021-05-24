@@ -15,37 +15,6 @@ const YesterdayMatches = ({ yesterdayMatch }) => {
   );
   console.log(yesterdayMatchFilter);
 
-  const yesterdayMap = yesterdayMatchFilter.map((match, index) => {
-    if (match.length === 0) {
-      return (
-        <tr>
-          <th></th>
-          <td>해당된 경기가 없습니다</td>
-          <td></td>
-        </tr>
-      );
-    } else {
-      return (
-        <tr key={index}>
-          <th scope="row" style={{ color: "red" }}>
-            {match.utcDate.substring(0, 10)}
-          </th>
-          <td>
-            <Link to={`/teams/${match.homeTeam.id}`}>
-              {match.homeTeam.name}
-            </Link>
-            &nbsp;&nbsp;{match.score.fullTime.homeTeam} &nbsp;vs &nbsp;
-            {match.score.fullTime.awayTeam} &nbsp;
-            <Link to={`/teams/${match.awayTeam.id}`}>
-              {match.awayTeam.name}
-            </Link>
-          </td>
-          <td>{match.score.winner} </td>
-        </tr>
-      );
-    }
-  });
-
   return (
     <Table
       striped
@@ -63,7 +32,36 @@ const YesterdayMatches = ({ yesterdayMatch }) => {
           <th>승리팀</th>
         </tr>
       </thead>
-      <tbody>{yesterdayMap}</tbody>
+      <tbody>
+        {yesterdayMatchFilter?.length ? (
+          <>
+            {yesterdayMatchFilter.map((match, index) => (
+              <tr key={index}>
+                <th scope="row" style={{ color: "red" }}>
+                  {match.utcDate.substring(0, 10)}
+                </th>
+                <td>
+                  <Link to={`/teams/${match.homeTeam.id}`}>
+                    {match.homeTeam.name}
+                  </Link>
+                  &nbsp;&nbsp;{match.score.fullTime.homeTeam} &nbsp;vs &nbsp;
+                  {match.score.fullTime.awayTeam} &nbsp;
+                  <Link to={`/teams/${match.awayTeam.id}`}>
+                    {match.awayTeam.name}
+                  </Link>
+                </td>
+                <td>{match.score.winner} </td>
+              </tr>
+            ))}
+          </>
+        ) : (
+          <tr>
+            <th></th>
+            <td>예정된 매치가 없습니다</td>
+            <td> </td>
+          </tr>
+        )}
+      </tbody>
     </Table>
   );
 };

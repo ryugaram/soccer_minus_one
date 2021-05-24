@@ -8,19 +8,6 @@ const LeftGames = ({ leftGames }) => {
     return time.substring(0, 10);
   };
 
-  const leftGamesMap = fiveLeftGames.map((games, index) => {
-    if (index < 5) {
-      return (
-        <tr key={index}>
-          <th>{Utctime(games.utcDate)}</th>
-          <td>
-            {games.awayTeam.name} : {games.homeTeam.name}
-          </td>
-        </tr>
-      );
-    }
-  });
-
   return (
     <>
       <Table striped className={style.leftGamesTable}>
@@ -30,7 +17,29 @@ const LeftGames = ({ leftGames }) => {
             <th>구단</th>
           </tr>
         </thead>
-        <tbody>{leftGamesMap}</tbody>
+        <tbody>
+          {!fiveLeftGames.length === 0 ? (
+            <>
+              {fiveLeftGames.map((games, index) => {
+                if (index < 5) {
+                  return (
+                    <tr key={index}>
+                      <th>{Utctime(games.utcDate)}</th>
+                      <td>
+                        {games.awayTeam.name} : {games.homeTeam.name}
+                      </td>
+                    </tr>
+                  );
+                }
+              })}
+            </>
+          ) : (
+            <tr>
+              <td>시즌 종료</td>
+              <td>시즌 종료</td>
+            </tr>
+          )}
+        </tbody>
       </Table>
     </>
   );

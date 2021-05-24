@@ -5,7 +5,6 @@ import NowdayMatches from "./NowdayMatches";
 import TwoDaysAgo from "./TwoDaysAgo";
 
 const HomeThreeDays = ({ matches }) => {
-  console.log(matches);
   let today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth() + 1;
@@ -31,8 +30,7 @@ const HomeThreeDays = ({ matches }) => {
   let twoDaysAgoDayMatch = matches.matches.filter((match) =>
     match.utcDate.includes(twoDaysAgoDay)
   );
-  console.log(yesterdayMatch);
-  console.log(twoDaysAgoDayMatch);
+
   return (
     <div>
       <Paper>

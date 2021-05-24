@@ -22,8 +22,6 @@ const setBirthday = (birthday) => {
 };
 
 export default function SimpleAccordion({ teamInfo, position }) {
-  // console.log(teamInfo);
-  // console.log(position);
   const classes = useStyles();
 
   const teamSquad = teamInfo.squad;

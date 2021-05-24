@@ -3,6 +3,18 @@
 
 참고 https://data.kleague.com/
 
+컴포넌트 
+
+EachTeamsLeftGame : 팀별 남은 게임
+HomeThreeDay : 날짜 계산 및 날짜 프롭스
+NowdayMatches:오늘 경기 테이블
+playerInfo : 아코디언으로 간략한 선수정보
+playterTabs: 아코디언 탭별
+RankingTable : 팀순위 
+ScorerTable : 골 순위
+TeamsEmblem : 팀 엠블럼
+TwoDaysAgo: 이틀전 경기 테이블
+yesterdayMatches:하루전 경기 테이블
 
 페이지 
 
