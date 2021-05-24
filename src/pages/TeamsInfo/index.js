@@ -15,7 +15,7 @@ import TeamsEmblem from "../../Components/TeamsEmblem";
 export default function TeamInfo() {
   const { id } = useParams();
   const API_URL = "https://api.football-data.org/v2";
-  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = "35707e4bd8c8416f8a9d93dcd3d6026a";
 
   const [loading, setLoading] = useState(false);
   const [teamInfo, seTeamInfo] = useState(null);

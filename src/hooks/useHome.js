@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "https://api.football-data.org/v2";
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = "35707e4bd8c8416f8a9d93dcd3d6026a";
 
 export default function useHome() {
   const [loading, setLoading] = useState(false);

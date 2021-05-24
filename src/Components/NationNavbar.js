@@ -19,7 +19,7 @@ const NationNavbar = () => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/player" className={style.home}>
+        <NavbarBrand href="/" className={style.home}>
           Home
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -31,14 +31,25 @@ const NationNavbar = () => {
             <NavItem style={{ marginRight: 50 }}>
               <Link to="/Leagues/2014">La Liga</Link>
             </NavItem>
-            <NavItem style={{ marginRight: 50 }}>
-              <Link to="/Leagues/2012">Bundesliga</Link>
-            </NavItem>
+
             <NavItem style={{ marginRight: 50 }}>
               <Link to="/Leagues/2019">Serie A</Link>
             </NavItem>
             <NavItem style={{ marginRight: 50 }}>
               <Link to="/Leagues/2015">Ligue1</Link>
+            </NavItem>
+            <NavItem style={{ marginRight: 50 }}>
+              <Link
+                disabled
+                to="/Leagues/2012"
+                style={{
+                  color: "gray",
+                  cursor: "not-allowed",
+                  pointerEvents: "none",
+                }}
+              >
+                Bundesliga
+              </Link>
             </NavItem>
           </Nav>
         </Collapse>
