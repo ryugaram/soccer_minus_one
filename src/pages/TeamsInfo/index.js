@@ -25,12 +25,15 @@ export default function TeamInfo() {
     setLoading(true);
     axios
       .all([
-        axios.get(`/v2/teams/${id}`, {
+        axios.get(`${API_URL}/v2/teams/${id}`, {
           headers: { "X-Auth-Token": `${apiKey}` },
         }),
-        axios.get(`/v2/teams/${id}/matches?status=SCHEDULED&&limit=3`, {
-          headers: { "X-Auth-Token": `${apiKey}` },
-        }),
+        axios.get(
+          `${API_URL}/v2/teams/${id}/matches?status=SCHEDULED&&limit=3`,
+          {
+            headers: { "X-Auth-Token": `${apiKey}` },
+          }
+        ),
       ])
       .then(
         axios.spread((res1, res2) => {

@@ -23,9 +23,12 @@ export default function useHome() {
     setLoading(true);
     axios
       // 손흥민 players/3343
-      .get(`/v2/matches?dateFrom=${twoDaysDate}&dateTo=${nowdate}`, {
-        headers: { "X-Auth-Token": `${apiKey}` },
-      })
+      .get(
+        `http://api.football-data.org/v2/matches?dateFrom=${twoDaysDate}&dateTo=${nowdate}`,
+        {
+          headers: { "X-Auth-Token": `${apiKey}` },
+        }
+      )
       .then((response) => {
         setMatches(response.data);
       })
