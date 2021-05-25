@@ -17,7 +17,7 @@ export default function Matches() {
   const { League } = useParams();
 
   const API_URL = "https://api.football-data.org/v2";
-  const apiKey = "35707e4bd8c8416f8a9d93dcd3d6026a";
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   const [loading, setLoading] = useState(false);
   const [scorers, setScorers] = useState(null);
@@ -28,14 +28,14 @@ export default function Matches() {
     setLoading(true);
     axios
       .all([
-        axios.get(`${API_URL}/v2/competitions/${League}/scorers?limit=5`, {
+        axios.get(`${API_URL}/competitions/${League}/scorers?limit=5`, {
           headers: { "X-Auth-Token": `${apiKey}` },
         }),
-        axios.get(`${API_URL}/v2/competitions/${League}/standings`, {
+        axios.get(`${API_URL}/competitions/${League}/standings`, {
           headers: { "X-Auth-Token": `${apiKey}` },
         }),
         axios.get(
-          `${API_URL}/v2/competitions/${League}/matches?status=SCHEDULED`,
+          `${API_URL}/competitions/${League}/matches?status=SCHEDULED`,
           {
             headers: { "X-Auth-Token": `${apiKey}` },
           }

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const apiKey = "35707e4bd8c8416f8a9d93dcd3d6026a";
+const API_URL = "https://api.football-data.org/v2";
+const apiKey = process.env.REACT_APP_API_KEY;
 
 export default function useHome() {
   const [loading, setLoading] = useState(false);
@@ -23,12 +24,9 @@ export default function useHome() {
     setLoading(true);
     axios
       // 손흥민 players/3343
-      .get(
-        `http://api.football-data.org/v2/matches?dateFrom=${twoDaysDate}&dateTo=${nowdate}`,
-        {
-          headers: { "X-Auth-Token": `${apiKey}` },
-        }
-      )
+      .get(`${API_URL}/matches?dateFrom=${twoDaysDate}&dateTo=${nowdate}`, {
+        headers: { "X-Auth-Token": `${apiKey}` },
+      })
       .then((response) => {
         setMatches(response.data);
       })
