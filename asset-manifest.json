@@ -3,10 +3,10 @@
     "static/js/0.b9ef9612.chunk.js": "/soccer_minus_one/static/js/0.b9ef9612.chunk.js",
     "static/js/0.b9ef9612.chunk.js.map": "/soccer_minus_one/static/js/0.b9ef9612.chunk.js.map",
     "main.css": "/soccer_minus_one/static/css/main.ae735458.chunk.css",
-    "main.js": "/soccer_minus_one/static/js/main.21cc9b18.chunk.js",
-    "main.js.map": "/soccer_minus_one/static/js/main.21cc9b18.chunk.js.map",
-    "runtime-main.js": "/soccer_minus_one/static/js/runtime-main.4685e7e8.js",
-    "runtime-main.js.map": "/soccer_minus_one/static/js/runtime-main.4685e7e8.js.map",
+    "main.js": "/soccer_minus_one/static/js/main.d6149f06.chunk.js",
+    "main.js.map": "/soccer_minus_one/static/js/main.d6149f06.chunk.js.map",
+    "runtime-main.js": "/soccer_minus_one/static/js/runtime-main.fd32081f.js",
+    "runtime-main.js.map": "/soccer_minus_one/static/js/runtime-main.fd32081f.js.map",
     "static/css/3.4c97ca4f.chunk.css": "/soccer_minus_one/static/css/3.4c97ca4f.chunk.css",
     "static/js/3.f06af1ca.chunk.js": "/soccer_minus_one/static/js/3.f06af1ca.chunk.js",
     "static/js/3.f06af1ca.chunk.js.map": "/soccer_minus_one/static/js/3.f06af1ca.chunk.js.map",
@@ -19,8 +19,8 @@
     "static/js/6.ffb47ff8.chunk.js": "/soccer_minus_one/static/js/6.ffb47ff8.chunk.js",
     "static/js/6.ffb47ff8.chunk.js.map": "/soccer_minus_one/static/js/6.ffb47ff8.chunk.js.map",
     "static/css/7.0e469247.chunk.css": "/soccer_minus_one/static/css/7.0e469247.chunk.css",
-    "static/js/7.45f7c9b4.chunk.js": "/soccer_minus_one/static/js/7.45f7c9b4.chunk.js",
-    "static/js/7.45f7c9b4.chunk.js.map": "/soccer_minus_one/static/js/7.45f7c9b4.chunk.js.map",
+    "static/js/7.8f8635f5.chunk.js": "/soccer_minus_one/static/js/7.8f8635f5.chunk.js",
+    "static/js/7.8f8635f5.chunk.js.map": "/soccer_minus_one/static/js/7.8f8635f5.chunk.js.map",
     "static/js/8.0985c205.chunk.js": "/soccer_minus_one/static/js/8.0985c205.chunk.js",
     "static/js/8.0985c205.chunk.js.map": "/soccer_minus_one/static/js/8.0985c205.chunk.js.map",
     "index.html": "/soccer_minus_one/index.html",
@@ -32,10 +32,10 @@
     "static/js/3.f06af1ca.chunk.js.LICENSE.txt": "/soccer_minus_one/static/js/3.f06af1ca.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4685e7e8.js",
+    "static/js/runtime-main.fd32081f.js",
     "static/css/3.4c97ca4f.chunk.css",
     "static/js/3.f06af1ca.chunk.js",
     "static/css/main.ae735458.chunk.css",
-    "static/js/main.21cc9b18.chunk.js"
+    "static/js/main.d6149f06.chunk.js"
   ]
 }
