@@ -3,7 +3,7 @@ import { Table } from "reactstrap";
 import { Link } from "react-router-dom";
 
 const YesterdayMatches = ({ yesterdayMatch }) => {
-  console.log(yesterdayMatch);
+
 
   const yesterdayMatchFilter = yesterdayMatch.filter(
     (match) =>
@@ -13,7 +13,7 @@ const YesterdayMatches = ({ yesterdayMatch }) => {
       match.competition.name === "Primera Division" ||
       match.competition.name === "Ligue 1"
   );
-  console.log(yesterdayMatchFilter);
+ 
 
   return (
     <Table

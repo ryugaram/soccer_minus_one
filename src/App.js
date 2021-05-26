@@ -19,13 +19,16 @@ function App() {
       <Router>
         <NationNavbar />
         <Switch>
-          <Route path="/teams/:id" children={<TeamInfoPage />}>
+          <Route path="/soccer_minus_one/teams/:id" children={<TeamInfoPage />}>
             <TeamInfoPage />
           </Route>
-          <Route path="/home">
+          <Route path="/soccer_minus_one/home">
             <HomePage />
           </Route>
-          <Route path="/Leagues/:League" children={<LeaguePage />}>
+          <Route
+            path="/soccer_minus_one/Leagues/:League"
+            children={<LeaguePage />}
+          >
             <LeaguePage />
           </Route>
           <Redirect path="**" to="/home" />
