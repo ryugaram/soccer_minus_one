@@ -12,7 +12,7 @@ export default function PlayerInfo() {
 
   if (loading || !matches) return <UtilsCircularProgress />;
 
-  console.log(matches);
+ 
 
   return (
     <Container>
