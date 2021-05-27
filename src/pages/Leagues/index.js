@@ -28,18 +28,15 @@ export default function Matches() {
     setLoading(true);
     axios
       .all([
-        axios.get(`${API_URL}/competitions/${League}/scorers?limit=5`, {
+        axios.get(`/v2/competitions/${League}/scorers?limit=5`, {
           headers: { "X-Auth-Token": `${apiKey}` },
         }),
-        axios.get(`${API_URL}/competitions/${League}/standings`, {
+        axios.get(`/v2/competitions/${League}/standings`, {
           headers: { "X-Auth-Token": `${apiKey}` },
         }),
-        axios.get(
-          `${API_URL}/competitions/${League}/matches?status=SCHEDULED`,
-          {
-            headers: { "X-Auth-Token": `${apiKey}` },
-          }
-        ),
+        axios.get(`/v2/competitions/${League}/matches?status=SCHEDULED`, {
+          headers: { "X-Auth-Token": `${apiKey}` },
+        }),
       ])
       .then(
         axios.spread((res1, res2, res3) => {
@@ -58,6 +55,7 @@ export default function Matches() {
 
   if (!scorers || !rankings || loading || !leftGames)
     return <UtilsCircularProgress />;
+  console.log(rankings);
 
   return (
     <Container>

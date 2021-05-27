@@ -10,7 +10,6 @@ import Paper from "@material-ui/core/Paper";
 import PlayerInfo from "../../Components/PlayerInfo";
 import PlayerTabs from "../../Components/PlayerTabs";
 import EachTeamsLeftGames from "../../Components/EachTeamsLeftGames";
-import TeamsEmblem from "../../Components/TeamsEmblem";
 
 export default function TeamInfo() {
   const { id } = useParams();
@@ -25,10 +24,10 @@ export default function TeamInfo() {
     setLoading(true);
     axios
       .all([
-        axios.get(`${API_URL}/teams/${id}`, {
+        axios.get(`/v2/teams/${id}`, {
           headers: { "X-Auth-Token": `${apiKey}` },
         }),
-        axios.get(`${API_URL}/teams/${id}/matches?status=SCHEDULED&&limit=3`, {
+        axios.get(`/v2/teams/${id}/matches?status=SCHEDULED&&limit=3`, {
           headers: { "X-Auth-Token": `${apiKey}` },
         }),
       ])

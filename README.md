@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# :soccer: SOCCER-1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### :point_right: [자세히 알아보기](https://github.com/ryugaram/soccer_minus_one/wiki/%EC%9E%90%EC%84%B8%ED%9E%88-%EB%B3%B4%EA%B8%B0)
 
-## Available Scripts
+<br><br>
 
-In the project directory, you can run:
+## :house: Home Page
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<BR>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### :point_right: [SOCCER_MINUS_ONE](https://ryugaram.github.io/soccer_minus_one/)
 
-### `npm test`
+<br><br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :pencil: 소개
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br> <br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> ### 축덕들 다 모여라! &nbsp; **SOCCER-1은 5대리그를 지원합니다!** <br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+### 응원하는 팀이 있으신가요? &nbsp; 해당팀의 일정 , 경기기록을 챙겨보세요!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 뉴비이신가요? 그렇다면 크게 이기고 점수 잘내는 팀을 찾아보세요!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### (골 잘넣는 선수가 짱이에요 !!!)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<BR>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **SOCCER-1** 에서 당신의 응원팀을 찾아보세요!
