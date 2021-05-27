@@ -28,7 +28,7 @@ function App() {
           <Route path="/Leagues/:League" children={<LeaguePage />}>
             <LeaguePage />
           </Route>
-          <Redirect path="**" to="/" exact />
+          <Redirect path="**" to="/" />
         </Switch>
       </Router>
     </Suspense>
