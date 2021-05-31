@@ -19,7 +19,7 @@ const NationNavbar = () => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/" className={style.home}>
+        <NavbarBrand href="/soccer_minus_one" className={style.home}>
           Home
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />

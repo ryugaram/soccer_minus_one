@@ -22,13 +22,13 @@ function App() {
           <Route path="/teams/:id" children={<TeamInfoPage />}>
             <TeamInfoPage />
           </Route>
-          <Route path="/" exact>
+          <Route path="/soccer_minus_one" exact>
             <HomePage />
           </Route>
           <Route path="/Leagues/:League" children={<LeaguePage />}>
             <LeaguePage />
           </Route>
-          <Redirect path="**" to="/" />
+          <Redirect path="**" to="/soccer_minus_one" />
         </Switch>
       </Router>
     </Suspense>
