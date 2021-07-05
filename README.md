@@ -12,6 +12,14 @@
 
 ### :point_right: [SOCCER_MINUS_ONE](https://ryugaram.github.io/soccer_minus_one/)
 
+<br>
+<span style="color:red"> * 시즌 종료로 인한 api값 변동으로 팀소개 부분은 공사중입니다.! </span>
+
+<br>
+<br>
+
+<span style="color:#a6b8c4"> 다음 시즌에 만나요 👋 </span>
+
 <br><br>
 
 ## :pencil: 소개

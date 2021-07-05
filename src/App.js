@@ -13,6 +13,7 @@ const TeamInfoPage = lazy(() => import("./pages/TeamsInfo"));
 const HomePage = lazy(() => import("./pages/Home"));
 const LeaguePage = lazy(() => import("./pages/Leagues"));
 
+// ${API_URL}
 function App() {
   return (
     <Suspense fallback={<CircularProgress />}>

@@ -20,6 +20,8 @@ export default function TeamInfo() {
   const [teamInfo, seTeamInfo] = useState(null);
   const [matches, setMatches] = useState(null);
 
+  //api 주소 개발시에는 api주소 빼고 /v2/~ ${API_URL}
+
   useEffect(() => {
     setLoading(true);
     axios
@@ -92,9 +94,12 @@ export default function TeamInfo() {
         <div className={style.teamNameInfo} style={{ color: "white" }}>
           {teamInfo.name}&nbsp;&nbsp; ({teamInfo.venue})
         </div>
-        <div className={style.activeInfo}>{teamActiveInfo}</div>
+        <div className={style.activeInfo}>
+          {!teamActiveInfo.length === 0 ? { teamActiveInfo } : " 정비중"}
+        </div>
         <div className={style.coachName}>
-          HEAD COACH : &nbsp; {coachName[0].name}
+          정비중
+          {/* {coachName[0].name} */}
         </div>
       </Paper>
       {color}

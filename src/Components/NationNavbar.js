@@ -26,17 +26,17 @@ const NationNavbar = () => {
         <Collapse isOpen={isOpen} navbar className={style.leagues}>
           <Nav className={style.ul} navbar>
             <NavItem style={{ marginRight: 50 }}>
-              <Link to="/Leagues/2021">Premier League</Link>
+              <Link to="/soccer_minus_one/Leagues/2021">Premier League</Link>
             </NavItem>
             <NavItem style={{ marginRight: 50 }}>
-              <Link to="/Leagues/2014">La Liga</Link>
+              <Link to="/soccer_minus_one/Leagues/2014">La Liga</Link>
             </NavItem>
 
             <NavItem style={{ marginRight: 50 }}>
-              <Link to="/Leagues/2019">Serie A</Link>
+              <Link to="/soccer_minus_one/Leagues/2019">Serie A</Link>
             </NavItem>
             <NavItem style={{ marginRight: 50 }}>
-              <Link to="/Leagues/2015">Ligue1</Link>
+              <Link to="/soccer_minus_one/Leagues/2015">Ligue1</Link>
             </NavItem>
             <NavItem style={{ marginRight: 50 }}>
               <Link
